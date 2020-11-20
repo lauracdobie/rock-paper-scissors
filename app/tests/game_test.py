@@ -23,6 +23,11 @@ class TestGame(unittest.TestCase):
 
         self.assertEqual("Chiara", winner.name)
 
+    def test_paper_beats_rock(self):
+        winner = self.game.play_rock_paper_scissors(self.player_2, self.player_3)
+
+        self.assertEqual("Laura", winner.name)
+
 
 
         
