@@ -4,12 +4,12 @@ from app.models.player import Player
 class TestPlayer(unittest.TestCase):
 
     def test_player_has_name(self):
-        player1 = Player("player 1", "rock")
+        player_1 = Player("player 1", "rock")
 
-        self.assertEqual("player 1", player1.name)
+        self.assertEqual("player 1", player_1.name)
 
     def test_player_has_choice(self):
-        player1 = Player("player 1", "rock")
+        player_1 = Player("player 1", "rock")
 
-        self.assertEqual("rock", player1.choice)
+        self.assertEqual("rock", player_1.choice)
 
