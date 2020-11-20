@@ -1,18 +1,25 @@
-# from app.models.player import Player
+from app.models.player import Player
 
 class Game():
-    def __init__(self, player_1, player_2):
-        self.player_1 = player_1
-        self.player_2 = player_2
+    def __init__(self, name):
+        self.name = name
 
-    # def rock_paper_scissors(self, player_1, player_2):
-    #     "paper" > "rock"
-    #     "scissors" > "paper"
-    #     "rock" > "scissors"
-    #     if self.player_1.choice > self.player_2.choice:
+    # def play_rock_paper_scissors(self, player_1, player_2):
+    #     if player_1.choice == "paper" and player_2.choice == "rock":
     #         return player_1
-    #     elif self.player_2.choice > self.player_1.choice:
+    #     elif player_2.choice == "paper" and player_1.choice == "rock"
     #         return player_2
-    #     else:
+
+    #     elif player_1.choice == "scissors" and player_2.choice == "paper":
+    #         return player_1
+    #     elif player_2.choice == "scissors" and player_1.choice == "paper"
+    #         return player_2
+
+    #     elif player_1.choice == "rock" and player_2.choice == "scissors":
+    #         return player_1
+    #     elif player_2.choice == "rock" and player_1.choice == "scissors"
+    #         return player_2
+
+    #     elif player_1.choice == player_2.choice:
     #         return None
 
