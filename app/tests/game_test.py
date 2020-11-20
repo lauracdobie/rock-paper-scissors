@@ -7,6 +7,7 @@ class TestGame(unittest.TestCase):
         self.player_1 = Player("Dave", "scissors")
         self.player_2 = Player("Laura", "paper")
         self.player_3 = Player("Chiara", "rock")
+        self.player_4 = Player("Wayne", "rock")
         
         self.game = Game("Rock Paper Scissors")
 
@@ -27,6 +28,11 @@ class TestGame(unittest.TestCase):
         winner = self.game.play_rock_paper_scissors(self.player_2, self.player_3)
 
         self.assertEqual("Laura", winner.name)
+
+    def test_same_choice_returns_none(self):
+        winner = self.game.play_rock_paper_scissors(self.player_3, self.player_4)
+
+        self.assertIsNone(winner)
 
 
 
