@@ -18,6 +18,7 @@ class Game():
 
         elif self.player_1.choice == "rock" and self.player_2.choice == "scissors":
             return self.player_1
+            
         elif self.player_2.choice == "rock" and self.player_1.choice == "scissors":
             return self.player_2
 

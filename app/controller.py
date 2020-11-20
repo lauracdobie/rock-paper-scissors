@@ -11,9 +11,16 @@ def test():
 
 @app.route('/result')
 def get_result():
-    player_1 = Player("Owl", "rock")
-    player_2 = Player("Pussycat", "scissors")
+    player_1 = Player("Owl", "scissors")
+    player_2 = Player("Pussycat", "rock")
 
-    winner = game.play_rock_paper_scissors(player_1, player_2)
+    current_game = Game(player_1, player_2)
 
-    return render_template('result.html', choice1=player_1.choice, choice2=player_2.choice, title='Result')
+    winner = current_game.play_rock_paper_scissors()
+
+    if winner != None:
+        result = f"{winner.name} is the winner!"
+    else: 
+        result = "It's a draw!"
+
+    return render_template('result.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)
