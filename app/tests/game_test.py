@@ -14,14 +14,14 @@ class TestGame(unittest.TestCase):
         self.assertEqual("Rock Paper Scissors", self.game.name)
 
     def test_scissors_beat_paper(self):
-        result = self.game.play_rock_paper_scissors(self.player_1, self.player_2)
+        winner = self.game.play_rock_paper_scissors(self.player_1, self.player_2)
 
-        self.assertEqual(self.player_1, result)
+        self.assertEqual("Dave", winner.name)
 
-    # def test_rock_beats_scissors(self):
-    #     result = self.game.play_rock_paper_scissors(self.player_1, self.player_3)
+    def test_rock_beats_scissors(self):
+        winner = self.game.play_rock_paper_scissors(self.player_1, self.player_3)
 
-    #     self.assertEqual(self.player_3, result)
+        self.assertEqual("Chiara", winner.name)
 
 
 
