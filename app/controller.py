@@ -61,6 +61,30 @@ def play_computer():
 
     return render_template('play-computer.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)
 
-@app.route('/solo-play')
+@app.route('/choose-weapon') 
 def solo_play():
-    return render_template('single-player.html', title='Play the computer!')        
+    return render_template('single-player.html', title='Play the computer!')
+
+@app.route('/solo-play', methods=["POST"])
+def single_player_game():
+    weapons = ["rock", "paper", "scissors"]
+    random_weapon = choice(weapons)
+
+    player_name = request.form["name"]
+    player_weapon = request.form["weapon"]
+
+    player_1 = Player(player_name, player_weapon)
+    player_2 = Player("The Computer", random_weapon)
+
+    current_game = Game(player_1, player_2)
+
+    winner = current_game.play_rock_paper_scissors()
+
+    if winner == player_1:
+        result = "You are the winner!"
+    elif winner == player_2:
+        result = "The computer is the winner!"
+    else: 
+        result = "It's a draw!"
+
+    return render_template('single-player-result.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)
