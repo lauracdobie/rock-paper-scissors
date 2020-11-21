@@ -1,13 +1,18 @@
 <html>
     <head>
       <title>{{ title }} - Rock-Paper-Scissors</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     </head>
     <body>
-        <ul>
-          <li><a href="/">Home</a></li>
-        </ul>
-        <hr>
+        <header>
+            <ul>
+                <li><a href="/choose-weapon">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <hr>
+        </header>
         {% block content %}
         {% endblock %}
     </body>

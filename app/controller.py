@@ -5,8 +5,8 @@ from app.models.game import *
 from random import choice
 
 @app.route('/')
-def test():
-    return "Boo!"
+def home():
+    return render_template('single-player.html', title='Play the computer!')
 
 # @app.route('/<choice1>/<choice2>')
 
@@ -70,10 +70,10 @@ def single_player_game():
     weapons = ["rock", "paper", "scissors"]
     random_weapon = choice(weapons)
 
-    player_name = request.form["name"]
+    # player_name = request.form["name"]
     player_weapon = request.form["weapon"]
 
-    player_1 = Player(player_name, player_weapon)
+    player_1 = Player("Player 1", player_weapon)
     player_2 = Player("The Computer", random_weapon)
 
     current_game = Game(player_1, player_2)
@@ -88,3 +88,8 @@ def single_player_game():
         result = "It's a draw!"
 
     return render_template('single-player-result.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title="About")
+
