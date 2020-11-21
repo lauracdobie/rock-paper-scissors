@@ -59,4 +59,8 @@ def play_computer():
     else: 
         result = "It's a draw!"
 
-    return render_template('play-computer.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)        
+    return render_template('play-computer.html', choice1=player_1.choice, choice2=player_2.choice, player1name=player_1.name, player2name=player_2.name, title='Result', result=result)
+
+@app.route('/solo-play')
+def solo_play():
+    return render_template('single-player.html', title='Play the computer!')        
