@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<article id="game-intro"></article>
-    <h1>Rock, Paper, Scissors</h1>
-    <p>Your favourite childhood game, but with the added bonus of being able to play it if you're friendless or avoiding vectors of disease!</p>
-    <p>You probably know the drill, but if you don't:</p> 
-    <ul>
-        <li>Rock beats scissors</li> 
-        <li>Scissors beat paper</li>
-        <li>Paper beats rock</li>
-    </ul>
+<article id="game-intro">
+    <section class="info">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Your favourite childhood game, but with the added bonus of being able to play it if you're friendless or avoiding vectors of disease!</p>
+        <p>You probably know the drill, but if you don't:</p> 
+        <ul>
+            <li>Rock beats scissors</li> 
+            <li>Scissors beat paper</li>
+            <li>Paper beats rock</li>
+        </ul>
+    </section>
     <button class="play-button"><a href="/choose-weapon">Play now</a></button>
 </article>      
 {% endblock %}

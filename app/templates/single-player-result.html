@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Scores at the doors</h1>
-    <p>You played: <b>{{ choice1 }}</b></p>
-    <p>{{ player2name }} played: <b>{{ choice2 }}</b></p>
-    <p>Result: <b>{{ result }}</b></p>
+<section class="results">
+    <h1>{{ player2name }} played {{ choice2 }}</h1>
+    <h2 id="final-result">{{ result }}</h2>
+    <button class="play-button"><a href="/choose-weapon">Play again</a></button>
+</section>
 {% endblock %}

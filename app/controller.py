@@ -81,9 +81,9 @@ def single_player_game():
     winner = current_game.play_rock_paper_scissors()
 
     if winner == player_1:
-        result = "You are the winner!"
+        result = "You won!"
     elif winner == player_2:
-        result = "The computer is the winner!"
+        result = "You lost!"
     else: 
         result = "It's a draw!"
 
