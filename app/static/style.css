@@ -1,7 +1,7 @@
 body {
-    font-family: 'Castoro', serif;
-    background-color: cadetblue;
-    color: white;
+    font-family: 'Archivo', sans-serif;
+    background-color: #E95822;
+    color: black;
     margin: auto;
 }
 
@@ -12,17 +12,13 @@ header > ul > li {
 
 a {
     text-decoration: none;
-    border-bottom: solid 2px cadetblue;
+    border-bottom: solid 2px #E95822;
     transition: border ease-in 0.3s;
-    color: white;
+    color: black;
 }
 
 a:hover {
-    border-bottom: solid 2px white;
-}
-
-hr {
-    color: white;
+    border-bottom: solid 2px black;
 }
 
 h1 {
@@ -34,14 +30,55 @@ p {
 }
 
 #play-button {
-    font-family: 'Castoro', serif;
-    background-color: cadetblue;
-    color: white;
-    border: solid 2px;
-    padding: 10px 20px;
+    font-family: 'Archivo Black', sans-serif;
+    background-color: black;
+    text-transform: uppercase;
+    color:#E95822;
+    padding: 24px 0px;
     margin-top: 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 10px;
+    width: 220px;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.play-button {
+    font-family: 'Archivo Black', sans-serif;
+    background-color: black;
+    text-transform: uppercase;
+    color:#E95822;
+    padding: 24px 0px;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 10px;
+    width: 220px;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.play-button > a {
+    color: #E95822;
+    text-decoration: none;
+    border: none;
 }
 
 #game {
