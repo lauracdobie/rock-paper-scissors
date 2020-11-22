@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Fancy your chances against the computer?</h1>
-    <form action="/solo-play" method="post">
+    <form action="/solo-play" method="post" id="game">
         <input type="radio" id="rock" name="weapon" value="rock">
         <label for="rock">rock</label><br>
 
@@ -11,6 +11,6 @@
         <input type="radio" id="paper" name="weapon" value="paper">
         <label for="paper">paper</label><br>
 
-        <input type="submit" value="Play!"> 
+        <input type="submit" id="play-button" value="Play!"> 
     </form>
 {% endblock %}

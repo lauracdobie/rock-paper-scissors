@@ -2,7 +2,7 @@ body {
     font-family: 'Castoro', serif;
     background-color: cadetblue;
     color: white;
-    margin: 0;
+    margin: auto;
 }
 
 header > ul > li {
@@ -30,5 +30,20 @@ h1 {
 }
 
 p {
+    margin-left: 20px;
+}
+
+#play-button {
+    font-family: 'Castoro', serif;
+    background-color: cadetblue;
+    color: white;
+    border: solid 2px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#game {
     margin-left: 20px;
 }
