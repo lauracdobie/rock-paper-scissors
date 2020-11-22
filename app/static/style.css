@@ -118,6 +118,47 @@ article {
     margin-top: 118px;
 }
 
-/* #game {
-    margin-left: 20px;
-} */
+.choose-weapon {
+    text-align: center;
+    margin-top: 118px;
+}
+
+label {
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    margin-right: 30px;
+}
+
+label:last-child {
+    margin-right: 0;
+}
+#rock-label:after {
+    content: url("Icon-Rock.svg");
+    position: absolute;
+    transform: scale(50%) translateY(-80%) translateX(-20px);
+}
+#paper-label:after {
+    content: url("Icon-Paper.svg");
+    position: absolute;
+    transform: scale(50%) translateY(-80%) translateX(-20px);
+}
+
+#scissors-label:after {
+    content: url("Icon-Scissors.svg");
+    position: absolute;
+    transform: scale(50%) translateY(-80%) translateX(-20px);
+}
+
+input {
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+input:first-child {
+    margin-left: 0;
+}
+
+.options {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
