@@ -1,4 +1,5 @@
 from app.models.player import Player
+from random import choice
 
 class Game():
     def __init__(self, player_1, player_2):
@@ -24,4 +25,12 @@ class Game():
 
         elif self.player_1.choice == self.player_2.choice:
             return None
+
+    def generate_computer_player(self, player_2):
+        weapons = ["rock", "paper", "scissors"]
+        random_weapon = choice(weapons)
+        player_2.choice = random_weapon
+
+
+
 

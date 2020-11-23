@@ -40,6 +40,15 @@ class TestGame(unittest.TestCase):
 
         self.assertIsNone(winner)
 
+    def test_generate_computer_player(self):
+        player_1 = Player("Owl", "scissors")
+        player_2 = Player("The Computer", None)
+        self.game = Game(player_1, player_2)
+        self.game.generate_computer_player(player_2)
+
+        self.assertIsNotNone(player_2.choice)
+
+
 
 
         

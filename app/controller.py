@@ -70,8 +70,8 @@ def single_player_game():
     weapons = ["rock", "paper", "scissors"]
     random_weapon = choice(weapons)
 
-    # player_name = request.form["name"]
     player_weapon = request.form["weapon"]
+
 
     player_1 = Player("Player 1", player_weapon)
     player_2 = Player("The Computer", random_weapon)
