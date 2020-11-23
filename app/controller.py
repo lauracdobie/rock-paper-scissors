@@ -67,16 +67,14 @@ def solo_play():
 
 @app.route('/solo-play', methods=["POST"])
 def single_player_game():
-    weapons = ["rock", "paper", "scissors"]
-    random_weapon = choice(weapons)
-
     player_weapon = request.form["weapon"]
 
 
     player_1 = Player("Player 1", player_weapon)
-    player_2 = Player("The Computer", random_weapon)
+    player_2 = Player("The Computer", None)
 
     current_game = Game(player_1, player_2)
+    current_game.generate_computer_player(player_2)
 
     winner = current_game.play_rock_paper_scissors()
 
